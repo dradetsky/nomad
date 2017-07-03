@@ -13,6 +13,11 @@ branches:
   only:
     - master
 
+matrix:
+  include:
+    - env: TEST_UI=1
+    - env: TEST_NOMAD=1
+
 before_install:
     - sudo apt-get update
     - sudo apt-get install -y liblxc1 lxc-dev lxc

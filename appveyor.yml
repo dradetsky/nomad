@@ -6,6 +6,10 @@ environment:
   GOPATH: c:\gopath
   GOBIN: c:\gopath\bin
 
+  matrix:
+    - TEST_UI: 1
+    - TEST_NOMAD: 1
+
 install:
   - cmd: set PATH=%GOBIN%;c:\go\bin;%PATH%
   - cmd: echo %Path%
